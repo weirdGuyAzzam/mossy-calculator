@@ -35,12 +35,20 @@ function appendToDisplay(arg) {
   //So basically now user can't put + after +
 }
 
-// clear
+//delete the last char
+function Delete() {
+  currentInput = currentInput.slice(0, -1);
+  display.value = currentInput;
+}
+
+// clear everything
 function clearMemory() {
   display.value = "";
   value = null;
   currentInput = "";
 }
+
+// calculate the whole thing
 
 function calculate() {
   let number = [];
@@ -62,13 +70,13 @@ function calculate() {
       }
     }
   }
-  let value;
-  let currentValue = "";
 
   console.log(number);
   console.log(operator);
 
-  // calculate the whole thing
+  // mathematical evaluation with number array and operator array
+  let currentValue = "";
+  let value;
 
   for (let i = 0; operator.length > i; i++) {
     if (operator[i] == "+") {
@@ -110,11 +118,5 @@ function calculate() {
   }
 
   currentInput = String(value);
-  display.value = currentInput;
-}
-
-//delete the last char
-function Delete() {
-  currentInput = currentInput.slice(0, -1);
   display.value = currentInput;
 }
