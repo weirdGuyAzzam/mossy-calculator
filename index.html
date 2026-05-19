@@ -8,54 +8,56 @@
     </head>
     <body>
         <div class="main-comp">
-            <input readonly id="displayPrev" />
             <input readonly id="display" />
             <div id="keys">
-                <button class="calc-button" onclick="appendToDisplay(1)">
+                <button class="calc-button" data-value="1">
                     1
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(2)">
+                <button class="calc-button" data-value="2">
                     2
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(3)">
+                <button class="calc-button" data-value="3">
                     3
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(4)">
+                <button class="calc-button" data-value="4">
                     4
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(5)">
+                <button class="calc-button" data-value="5">
                     5
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(6)">
+                <button class="calc-button" data-value="6">
                     6
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(7)">
+                <button class="calc-button" data-value="7">
                     7
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(8)">
+                <button class="calc-button" data-value="8">
                     8
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(9)">
+                <button class="calc-button" data-value="9">
                     9
                 </button>
-                <button class="calc-button" onclick="appendToDisplay(0)">
+                <button class="calc-button" data-value="0">
                     0
                 </button>
-                <button class="calc-button" onclick="appendToDisplay('-')">
+                <button class="calc-button" data-value=".">
+                    .
+                </button>
+                <button class="calc-button" data-value="-"="substract">
                     -
                 </button>
-                <button class="calc-button" onclick="appendToDisplay('+')">
+                <button class="calc-button" data-value="+"="add">
                     +
                 </button>
-                <button class="calc-button" onclick="appendToDisplay('/')">
+                <button class="calc-button" data-value="/"="divide">
                     /
                 </button>
-                <button class="calc-button" onclick="appendToDisplay('*')">
+                <button class="calc-button" data-value="*"="multiplied">
                     *
                 </button>
-                <button class="calc-button" onclick="calculate()">=</button>
-                <button class="calc-button" onclick="clearMemory()">C</button>
-                <button class="calc-button" onclick="Delete()">&#9003</button>
+                <button class="calc-button" data-action="calculate">=</button>
+                <button class="calc-button" data-action="clearMemory">C</button>
+                <button class="calc-button" data-action="delete">&#9003</button>
             </div>
         </div>
         <script src="app.js"></script>
